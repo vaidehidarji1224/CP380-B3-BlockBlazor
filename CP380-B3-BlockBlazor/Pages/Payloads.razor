@@ -1,5 +1,4 @@
 ﻿@page "/payloads"
-
 <!-- TODO: Add using and inject statements -->
 
 <h3>Pending Transactions</h3>
@@ -10,10 +9,36 @@
 }
 else
 {
-    <!-- TODO: Render a table with all of the pending transactions 
+    <!-- TODO: Render a table with all of the pending transactions
                This table should include all of the fields for each pending transaction
       -->
 }
+<table background color = "black">
+<thead>
+    <tr>
+        <th>Username</th>
+        <th>Amount</th>
+        <th>Item</th>
+        <th>Transcation Type</th>
+    </tr>
+</thead>
+
+<tbody>
+
+    @foreach (var x in payloads)
+    {
+    <tr>
+        <td>@x.User</td>
+        <td>@x.Amount</td>
+        <td>@x.TransactionType</td>
+        <td>@x.Item</td>
+    </tr>
+    }
+</tbody>
+
+</table>
+}
+
 
 <p></p>
 
